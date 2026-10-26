@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="OAuth information for NixOS OWO Backup, a private local backup utility using Google Drive.">
+  <title>NixOS OWO Backup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><a class="brand" href="./">NixOS OWO Backup</a><nav aria-label="Main navigation"><a aria-current="page" href="./">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></header>
+  <main>
+    <p class="eyebrow">Private utility · OAuth information</p>
+    <h1>Local backups to Google Drive.</h1>
+    <p class="lead">NixOS OWO Backup is a personal configuration of rclone and a local background service. It uploads selected files from the operator’s computer to that operator’s Google Drive.</p>
+    <section aria-labelledby="purpose"><h2 id="purpose">Purpose and access</h2><p>This application is intended only for the operator’s own use. This website documents the application for its Google OAuth consent configuration. It does not offer public sign-up, account linking, file uploads, or a hosted backup service.</p><p>The configured OAuth permission is <code>drive.file</code>. It allows the utility to create backup files and manage files created by this application, rather than granting access to every file in the account.</p></section>
+    <section aria-labelledby="behavior"><h2 id="behavior">Backup behavior</h2><ul><li>Files travel from the local computer to Google Drive.</li><li>New and modified files are copied into <code>current</code>, preserving their relative paths and file formats.</li><li>Before a cloud file is replaced, its previous copy is moved into a separate, uniquely named <code>history</code> directory.</li><li>Deleting a local file does not delete its existing cloud backup. The configured workflow does not automatically prune history.</li><li>Cloud changes are not automatically downloaded to replace local files.</li></ul><p>Backup and recovery results must be checked against the local run reports and actual restore checks. This information page does not report the status of a particular computer or backup.</p></section>
+    <section aria-labelledby="data"><h2 id="data">Where data goes</h2><p>The backup process runs on the local computer and sends selected files directly to Google Drive over Google’s APIs. This static website does not receive files, OAuth credentials, or backup contents.</p><p>Read the <a href="privacy.html">privacy policy</a> for details about file information, retention, permissions, and this website’s hosting.</p></section>
+  </main>
+  <footer><p>Information updated October 26, 2026. This private utility is not affiliated with or endorsed by Google, NixOS, or the rclone project.</p><p><a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p></footer>
+</body>
+</html>

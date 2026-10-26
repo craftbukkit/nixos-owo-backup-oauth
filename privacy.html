@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for the private NixOS OWO Backup utility and this information site.">
+  <title>Privacy · NixOS OWO Backup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><a class="brand" href="./">NixOS OWO Backup</a><nav aria-label="Main navigation"><a href="./">Home</a><a aria-current="page" href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></header>
+  <main>
+    <p class="eyebrow">Effective October 26, 2026</p>
+    <h1>Privacy policy</h1>
+    <p class="lead">This policy describes a private backup utility operated on its operator’s own computer. It also describes this static information website. It is not an invitation for other people to connect accounts or send data.</p>
+    <section><h2>Information accessed and its purpose</h2><p>The local utility reads the files selected for backup and the file information needed to copy and verify them, including names, relative paths, sizes, modification times, and checksums. It uses Google account identity and storage quota information to verify the intended account and check available space.</p><p>Google OAuth grants the <code>drive.file</code> permission so the utility can create and manage its own backup files. The selected file contents and associated file information are sent to the operator’s Google Drive solely for backup, version preservation, verification, and requested recovery.</p></section>
+    <section><h2>Storage and sharing</h2><p>Backup files and historical copies are stored in Google Drive under the operator’s account. Local status reports and logs may contain file paths, sizes, transfer results, and error information.</p><p>OAuth tokens and the client secret are stored in restricted local credential files, separate from this website’s source. The website does not collect or store these credentials. The backup workflow does not intentionally share the backups with other accounts, sell their contents, use them for advertising, or use them to train models. The operator’s Google Drive sharing settings continue to control access to the stored files.</p><p>Google processes the data sent to Drive under its own applicable terms and <a href="https://policies.google.com/privacy">privacy policy</a>. There is no separate application server that receives the backup contents.</p></section>
+    <section><h2>Retention, stopping access, and deletion</h2><p>The configured backup keeps current copies and separate historical copies. Local deletion does not remove an existing cloud copy, and history is not automatically pruned.</p><p>The operator can stop the local background service and revoke the application’s permission through <a href="https://myaccount.google.com/connections">Google Account connections</a>. Revocation prevents further use of that permission; it does not itself delete existing Drive backups, downloaded restores, or local logs.</p><p>To remove retained data, the operator must separately delete the appropriate current files and history from Drive, handle Drive’s Trash as desired, and remove any local restored copies or reports that should no longer be retained.</p></section>
+    <section><h2>This website</h2><p>These pages contain no analytics scripts, advertising, tracking pixels, application forms, or file-upload controls. They do not request OAuth tokens, account passwords, or backup data.</p><p>The website is intended for static hosting on GitHub Pages. GitHub may process ordinary request information, including visitor IP addresses, under its <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">privacy statement</a>. This policy does not claim that the hosting provider keeps no access logs.</p></section>
+    <section><h2>Scope and changes</h2><p>This application is for the operator’s private use. Any change to its permissions or data handling should be reflected here before that changed configuration is used. Questions or requests about a particular private backup should be addressed directly to its operator through the existing setup or administration channel.</p></section>
+  </main>
+  <footer><p><a href="./">Application home</a> · <a href="terms.html">Terms of use</a></p></footer>
+</body>
+</html>
